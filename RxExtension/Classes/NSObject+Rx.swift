@@ -11,6 +11,13 @@ import RxSwift
 import RxCocoa
 import ObjectiveC
 
+
+extension Reactive where Base: NSObject {
+    var disposeBag: DisposeBag {
+        return base.rx_disposeBag
+    }
+}
+
 public extension NSObject {
     fileprivate struct AssociatedKeys {
         static var DisposeBag = "rx_disposeBag"
@@ -42,11 +49,5 @@ public extension NSObject {
                 objc_setAssociatedObject(self, &AssociatedKeys.DisposeBag, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             }
         }
-    }
-}
-
-extension Reactive where Base: NSObject {
-    var disposeBag: DisposeBag {
-        return base.rx_disposeBag
     }
 }
