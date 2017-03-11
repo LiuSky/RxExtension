@@ -11,13 +11,6 @@ import RxSwift
 import RxCocoa
 import ObjectiveC
 
-
-extension Reactive where Base: NSObject {
-    var disposeBag: DisposeBag {
-        return base.rx_disposeBag
-    }
-}
-
 public extension NSObject {
     fileprivate struct AssociatedKeys {
         static var DisposeBag = "rx_disposeBag"
