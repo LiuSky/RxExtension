@@ -12,6 +12,13 @@
 		3333D0921E739CCF00CBFE8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3333D0901E739CCF00CBFE8B /* Main.storyboard */; };
 		3333D0941E739CCF00CBFE8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3333D0931E739CCF00CBFE8B /* Assets.xcassets */; };
 		3333D0971E739CCF00CBFE8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3333D0951E739CCF00CBFE8B /* LaunchScreen.storyboard */; };
+		3333D0A61E73A2B700CBFE8B /* NSObject+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333D09F1E73A2B700CBFE8B /* NSObject+Rx.swift */; };
+		3333D0A71E73A2B700CBFE8B /* Operators+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333D0A01E73A2B700CBFE8B /* Operators+Rx.swift */; };
+		3333D0A81E73A2B700CBFE8B /* Reverse+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333D0A11E73A2B700CBFE8B /* Reverse+Rx.swift */; };
+		3333D0A91E73A2B700CBFE8B /* UIButton+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333D0A21E73A2B700CBFE8B /* UIButton+Rx.swift */; };
+		3333D0AA1E73A2B700CBFE8B /* UIControl+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333D0A31E73A2B700CBFE8B /* UIControl+Rx.swift */; };
+		3333D0AB1E73A2B700CBFE8B /* UISwitch+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333D0A41E73A2B700CBFE8B /* UISwitch+Rx.swift */; };
+		3333D0AC1E73A2B700CBFE8B /* UITableView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333D0A51E73A2B700CBFE8B /* UITableView+Rx.swift */; };
 		FBA1B93B9B3EE5EFD94CA30F /* Pods_RxExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BFE97FA894A94457EBC03A /* Pods_RxExtension.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +30,13 @@
 		3333D0931E739CCF00CBFE8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3333D0961E739CCF00CBFE8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3333D0981E739CCF00CBFE8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3333D09F1E73A2B700CBFE8B /* NSObject+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Rx.swift"; sourceTree = "<group>"; };
+		3333D0A01E73A2B700CBFE8B /* Operators+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Operators+Rx.swift"; sourceTree = "<group>"; };
+		3333D0A11E73A2B700CBFE8B /* Reverse+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reverse+Rx.swift"; sourceTree = "<group>"; };
+		3333D0A21E73A2B700CBFE8B /* UIButton+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Rx.swift"; sourceTree = "<group>"; };
+		3333D0A31E73A2B700CBFE8B /* UIControl+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Rx.swift"; sourceTree = "<group>"; };
+		3333D0A41E73A2B700CBFE8B /* UISwitch+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISwitch+Rx.swift"; sourceTree = "<group>"; };
+		3333D0A51E73A2B700CBFE8B /* UITableView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Rx.swift"; sourceTree = "<group>"; };
 		84BFE97FA894A94457EBC03A /* Pods_RxExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FB8511B118C3BC72D90DA92 /* Pods-RxExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxExtension/Pods-RxExtension.release.xcconfig"; sourceTree = "<group>"; };
 		D8145592BE9439F194D446EF /* Pods-RxExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxExtension/Pods-RxExtension.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,6 +75,7 @@
 		3333D08B1E739CCF00CBFE8B /* RxExtension */ = {
 			isa = PBXGroup;
 			children = (
+				3333D09E1E73A2B700CBFE8B /* Classes */,
 				3333D08C1E739CCF00CBFE8B /* AppDelegate.swift */,
 				3333D08E1E739CCF00CBFE8B /* ViewController.swift */,
 				3333D0901E739CCF00CBFE8B /* Main.storyboard */,
@@ -69,6 +84,20 @@
 				3333D0981E739CCF00CBFE8B /* Info.plist */,
 			);
 			path = RxExtension;
+			sourceTree = "<group>";
+		};
+		3333D09E1E73A2B700CBFE8B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3333D09F1E73A2B700CBFE8B /* NSObject+Rx.swift */,
+				3333D0A01E73A2B700CBFE8B /* Operators+Rx.swift */,
+				3333D0A11E73A2B700CBFE8B /* Reverse+Rx.swift */,
+				3333D0A21E73A2B700CBFE8B /* UIButton+Rx.swift */,
+				3333D0A31E73A2B700CBFE8B /* UIControl+Rx.swift */,
+				3333D0A41E73A2B700CBFE8B /* UISwitch+Rx.swift */,
+				3333D0A51E73A2B700CBFE8B /* UITableView+Rx.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		5842518B7718E5A4114ED303 /* Pods */ = {
@@ -212,8 +241,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3333D0AC1E73A2B700CBFE8B /* UITableView+Rx.swift in Sources */,
 				3333D08F1E739CCF00CBFE8B /* ViewController.swift in Sources */,
+				3333D0AB1E73A2B700CBFE8B /* UISwitch+Rx.swift in Sources */,
+				3333D0A71E73A2B700CBFE8B /* Operators+Rx.swift in Sources */,
+				3333D0AA1E73A2B700CBFE8B /* UIControl+Rx.swift in Sources */,
+				3333D0A81E73A2B700CBFE8B /* Reverse+Rx.swift in Sources */,
+				3333D0A91E73A2B700CBFE8B /* UIButton+Rx.swift in Sources */,
 				3333D08D1E739CCF00CBFE8B /* AppDelegate.swift in Sources */,
+				3333D0A61E73A2B700CBFE8B /* NSObject+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
