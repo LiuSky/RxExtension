@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name             = "RxExtension"
-  s.version          = "0.1.5"
+  s.version          = "0.1.6"
   s.summary          = "Convenience of Rx"
 
   s.description      = <<-DESC
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Pod/Classes/*.swift'
+  s.source_files = 'RxExtension/Classes/*.swift'
 
   s.frameworks = 'Foundation'
   s.frameworks = 'UIKit'

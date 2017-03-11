@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-extension UIControl {
+public extension UIControl {
     static func valuePublic<T, ControlType: UIControl>(_ control: ControlType, getter:  @escaping (ControlType) -> T, setter: @escaping (ControlType, T) -> ()) -> ControlProperty<T> {
         let values: Observable<T> = Observable.deferred { [weak control] in
             guard let existingSelf = control else {

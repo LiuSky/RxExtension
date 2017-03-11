@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 
 
-extension Reactive where Base: UITableView {
+public extension Reactive where Base: UITableView {
     public func enableAutoDeselect() -> Disposable {
         return itemSelected
             .map { (at: $0, animated: true) }
@@ -18,7 +18,7 @@ extension Reactive where Base: UITableView {
     }
 }
 
-extension Reactive where Base: UICollectionView {
+public extension Reactive where Base: UICollectionView {
     public func enableAutoDeselect() -> Disposable {
         return itemSelected
             .map { (at: $0, animated: true) }

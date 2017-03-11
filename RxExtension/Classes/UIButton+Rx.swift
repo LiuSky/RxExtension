@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-extension Reactive where Base: UIButton {
+public extension Reactive where Base: UIButton {
     public var select: ControlProperty<Bool> {
         let source = tap.map { [unowned button = self.base] _ -> Bool in
             button.isSelected = button.isSelected.reverseValue
