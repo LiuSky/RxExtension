@@ -11,14 +11,14 @@ Pod::Spec.new do |s|
 
   s.homepage         = "https://github.com/LiuSky/RxExtension"
   s.license          = 'MIT'
-  s.author           = { "Marin Todorov" => "327847390@qq.com" }
+  s.author           = { "xiaobin liu" => "327847390@qq.com" }
   s.source           = { :git => "https://github.com/LiuSky/RxExtension.git", :tag => s.version.to_s }
 
   s.requires_arc = true
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Pod/Classes/*.swift'
+  s.source_files = 'RxExtension/Classes/*.swift'
 
   s.dependency 'RxCocoa', '~> 3.2'
   s.dependency 'RxSwift',    '~> 3.2'
