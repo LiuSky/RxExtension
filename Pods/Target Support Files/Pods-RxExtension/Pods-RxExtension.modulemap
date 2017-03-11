@@ -1,0 +1,6 @@
+framework module Pods_RxExtension {
+  umbrella header "Pods-RxExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}
