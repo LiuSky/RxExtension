@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3330C9671E7BBE3C002E2F88 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330C9651E7BBE3C002E2F88 /* Reachability.swift */; };
+		3330C9681E7BBE3C002E2F88 /* Rx+ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330C9661E7BBE3C002E2F88 /* Rx+ReachabilityService.swift */; };
 		3333D08D1E739CCF00CBFE8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333D08C1E739CCF00CBFE8B /* AppDelegate.swift */; };
 		3333D08F1E739CCF00CBFE8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333D08E1E739CCF00CBFE8B /* ViewController.swift */; };
 		3333D0921E739CCF00CBFE8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3333D0901E739CCF00CBFE8B /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3330C9651E7BBE3C002E2F88 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		3330C9661E7BBE3C002E2F88 /* Rx+ReachabilityService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Rx+ReachabilityService.swift"; sourceTree = "<group>"; };
 		3333D0891E739CCF00CBFE8B /* RxExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3333D08C1E739CCF00CBFE8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3333D08E1E739CCF00CBFE8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 				3333D0A31E73A2B700CBFE8B /* UIControl+Rx.swift */,
 				3333D0A41E73A2B700CBFE8B /* UISwitch+Rx.swift */,
 				3333D0A51E73A2B700CBFE8B /* UITableView+Rx.swift */,
+				3330C9651E7BBE3C002E2F88 /* Reachability.swift */,
+				3330C9661E7BBE3C002E2F88 /* Rx+ReachabilityService.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -248,7 +254,9 @@
 				3333D0AA1E73A2B700CBFE8B /* UIControl+Rx.swift in Sources */,
 				3333D0A81E73A2B700CBFE8B /* Reverse+Rx.swift in Sources */,
 				3333D0A91E73A2B700CBFE8B /* UIButton+Rx.swift in Sources */,
+				3330C9681E7BBE3C002E2F88 /* Rx+ReachabilityService.swift in Sources */,
 				3333D08D1E739CCF00CBFE8B /* AppDelegate.swift in Sources */,
+				3330C9671E7BBE3C002E2F88 /* Reachability.swift in Sources */,
 				3333D0A61E73A2B700CBFE8B /* NSObject+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
