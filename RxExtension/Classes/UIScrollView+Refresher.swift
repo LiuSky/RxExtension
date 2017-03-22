@@ -74,7 +74,7 @@ public extension UIScrollView {
     }
 }
 
-extension Reactive where Base: UIScrollView {
+public extension Reactive where Base: UIScrollView {
     
     public var isRefreshing: UIBindingObserver<Base, Bool> {
         return UIBindingObserver(UIElement: self.base) { refreshControl, refresh in
