@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import RxSwift
+import RxCocoa
 
 private var prepareForReuseBag: Int8 = 0
 
@@ -45,3 +46,14 @@ public extension Reactive where Base: UITableViewCell {
         return base.rx_prepareForReuseBag
     }
 }
+
+public extension Reactive where Base: UITableViewCell {
+    
+    var isMarked: UIBindingObserver<UITableViewCell, Bool> {
+        return UIBindingObserver(UIElement: self.base, binding: { (cell, isMarked) in
+            cell.accessoryType = isMarked ? .checkmark : .none
+        })
+    }
+}
+
+
