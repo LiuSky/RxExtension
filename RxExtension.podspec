@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name             = "RxExtension"
-  s.version          = "0.3.6"
+  s.version          = "0.3.7"
   s.summary          = "Convenience of Rx"
 
   s.description      = <<-DESC
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
 
   s.frameworks = 'Foundation'
   s.frameworks = 'UIKit'
-  s.dependency 'RxCocoa', '~> 3.4.0'
-  s.dependency 'RxSwift',    '~> 3.4.0'
+  s.dependency 'RxCocoa', '~> 3.5.0'
+  s.dependency 'RxSwift',    '~> 3.5.0'
   s.dependency 'MJRefresh',    '~> 3.1.12'
 end
