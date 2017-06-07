@@ -18,7 +18,6 @@
 		3333D0A71E73A2B700CBFE8B /* Operators+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333D0A01E73A2B700CBFE8B /* Operators+Rx.swift */; };
 		3333D0A81E73A2B700CBFE8B /* Reverse+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333D0A11E73A2B700CBFE8B /* Reverse+Rx.swift */; };
 		3333D0A91E73A2B700CBFE8B /* UIButton+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333D0A21E73A2B700CBFE8B /* UIButton+Rx.swift */; };
-		3333D0AA1E73A2B700CBFE8B /* UIControl+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333D0A31E73A2B700CBFE8B /* UIControl+Rx.swift */; };
 		3333D0AB1E73A2B700CBFE8B /* UISwitch+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333D0A41E73A2B700CBFE8B /* UISwitch+Rx.swift */; };
 		3333D0AC1E73A2B700CBFE8B /* UITableView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333D0A51E73A2B700CBFE8B /* UITableView+Rx.swift */; };
 		3356C5B51E8273FD0031ABFB /* UIScrollView+Refresher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356C5B41E8273FD0031ABFB /* UIScrollView+Refresher.swift */; };
@@ -43,7 +42,6 @@
 		3333D0A01E73A2B700CBFE8B /* Operators+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Operators+Rx.swift"; sourceTree = "<group>"; };
 		3333D0A11E73A2B700CBFE8B /* Reverse+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reverse+Rx.swift"; sourceTree = "<group>"; };
 		3333D0A21E73A2B700CBFE8B /* UIButton+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Rx.swift"; sourceTree = "<group>"; };
-		3333D0A31E73A2B700CBFE8B /* UIControl+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Rx.swift"; sourceTree = "<group>"; };
 		3333D0A41E73A2B700CBFE8B /* UISwitch+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISwitch+Rx.swift"; sourceTree = "<group>"; };
 		3333D0A51E73A2B700CBFE8B /* UITableView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Rx.swift"; sourceTree = "<group>"; };
 		3356C5B41E8273FD0031ABFB /* UIScrollView+Refresher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Refresher.swift"; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 				3333D0A01E73A2B700CBFE8B /* Operators+Rx.swift */,
 				3333D0A11E73A2B700CBFE8B /* Reverse+Rx.swift */,
 				3333D0A21E73A2B700CBFE8B /* UIButton+Rx.swift */,
-				3333D0A31E73A2B700CBFE8B /* UIControl+Rx.swift */,
 				3333D0A41E73A2B700CBFE8B /* UISwitch+Rx.swift */,
 				3333D0A51E73A2B700CBFE8B /* UITableView+Rx.swift */,
 				3330C9651E7BBE3C002E2F88 /* Reachability.swift */,
@@ -269,7 +266,6 @@
 				337CDE411E8A27FA0060B1F3 /* UITableViewHeaderFooterView+Rx.swift in Sources */,
 				3356C5B51E8273FD0031ABFB /* UIScrollView+Refresher.swift in Sources */,
 				337CDE3F1E8A25240060B1F3 /* UITableViewCell+Rx.swift in Sources */,
-				3333D0AA1E73A2B700CBFE8B /* UIControl+Rx.swift in Sources */,
 				3333D0A81E73A2B700CBFE8B /* Reverse+Rx.swift in Sources */,
 				3333D0A91E73A2B700CBFE8B /* UIButton+Rx.swift in Sources */,
 				3330C9681E7BBE3C002E2F88 /* Rx+ReachabilityService.swift in Sources */,

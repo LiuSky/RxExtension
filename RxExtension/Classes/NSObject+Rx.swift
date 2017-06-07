@@ -21,11 +21,11 @@ public extension Reactive where Base: NSObject {
 
 
 public extension NSObject {
-    fileprivate struct AssociatedKeys {
+    private struct AssociatedKeys {
         static var DisposeBag = "rx_disposeBag"
     }
     
-    fileprivate func doLocked(_ closure: () -> Void) {
+    private func doLocked(_ closure: () -> Void) {
         objc_sync_enter(self); defer { objc_sync_exit(self) }
         closure()
     }
