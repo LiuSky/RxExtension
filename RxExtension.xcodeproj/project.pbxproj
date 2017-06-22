@@ -20,6 +20,7 @@
 		3333D0A91E73A2B700CBFE8B /* UIButton+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333D0A21E73A2B700CBFE8B /* UIButton+Rx.swift */; };
 		3333D0AB1E73A2B700CBFE8B /* UISwitch+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333D0A41E73A2B700CBFE8B /* UISwitch+Rx.swift */; };
 		3333D0AC1E73A2B700CBFE8B /* UITableView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333D0A51E73A2B700CBFE8B /* UITableView+Rx.swift */; };
+		3340C3A91EFB926500336296 /* UIControl+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340C3A81EFB926500336296 /* UIControl+Rx.swift */; };
 		3356C5B51E8273FD0031ABFB /* UIScrollView+Refresher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3356C5B41E8273FD0031ABFB /* UIScrollView+Refresher.swift */; };
 		337CDE3F1E8A25240060B1F3 /* UITableViewCell+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CDE3E1E8A25240060B1F3 /* UITableViewCell+Rx.swift */; };
 		337CDE411E8A27FA0060B1F3 /* UITableViewHeaderFooterView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CDE401E8A27FA0060B1F3 /* UITableViewHeaderFooterView+Rx.swift */; };
@@ -44,6 +45,7 @@
 		3333D0A21E73A2B700CBFE8B /* UIButton+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Rx.swift"; sourceTree = "<group>"; };
 		3333D0A41E73A2B700CBFE8B /* UISwitch+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISwitch+Rx.swift"; sourceTree = "<group>"; };
 		3333D0A51E73A2B700CBFE8B /* UITableView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Rx.swift"; sourceTree = "<group>"; };
+		3340C3A81EFB926500336296 /* UIControl+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Rx.swift"; sourceTree = "<group>"; };
 		3356C5B41E8273FD0031ABFB /* UIScrollView+Refresher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Refresher.swift"; sourceTree = "<group>"; };
 		337CDE3E1E8A25240060B1F3 /* UITableViewCell+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Rx.swift"; sourceTree = "<group>"; };
 		337CDE401E8A27FA0060B1F3 /* UITableViewHeaderFooterView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+Rx.swift"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				337CDE401E8A27FA0060B1F3 /* UITableViewHeaderFooterView+Rx.swift */,
 				337CDE421E8A28480060B1F3 /* UICollectionReusableView+Rx.swift */,
 				338015541EA5ABA900AD7BBC /* ObservableConvertibleType+Rx.swift */,
+				3340C3A81EFB926500336296 /* UIControl+Rx.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3333D0AC1E73A2B700CBFE8B /* UITableView+Rx.swift in Sources */,
+				3340C3A91EFB926500336296 /* UIControl+Rx.swift in Sources */,
 				3333D08F1E739CCF00CBFE8B /* ViewController.swift in Sources */,
 				3333D0AB1E73A2B700CBFE8B /* UISwitch+Rx.swift in Sources */,
 				3333D0A71E73A2B700CBFE8B /* Operators+Rx.swift in Sources */,

@@ -10,7 +10,6 @@
 import RxSwift
 #endif
 
-import class Dispatch.queue.DispatchQueue
 
 public enum ReachabilityStatus {
     case reachable(viaWiFi: Bool)
