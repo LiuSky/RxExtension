@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name             = "RxExtension"
-  s.version          = "0.3.9"
+  s.version          = "0.4.0"
   s.summary          = "Convenience of Rx"
 
   s.description      = <<-DESC
