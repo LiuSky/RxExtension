@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name             = "RxExtension"
-  s.version          = "0.4.1"
+  s.version          = "0.4.2"
   s.summary          = "Convenience of Rx"
 
   s.description      = <<-DESC
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '8.0'
 
   s.source_files = 'RxExtension/Classes/*.swift'
 
