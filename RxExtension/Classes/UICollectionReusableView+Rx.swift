@@ -31,7 +31,7 @@ public extension UICollectionReusableView {
         
         _ = self.rx.sentMessage(#selector(UICollectionReusableView.prepareForReuse)).subscribe(onNext: { [weak self] _ in
             let newBag = DisposeBag()
-            objc_setAssociatedObject(self, &prepareForReuseBag, newBag, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+            objc_setAssociatedObject(self as Any, &prepareForReuseBag, newBag, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
         })
         
         return bag

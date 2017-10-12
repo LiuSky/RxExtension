@@ -48,7 +48,7 @@ public extension UIScrollView {
         return Observable.create({ observer -> Disposable in
             
             self.mj_header.refreshingBlock = {
-                observer.onNext()
+                observer.onNext(Void())
             }
             return Disposables.create()
         })
@@ -67,7 +67,7 @@ public extension UIScrollView {
         return Observable.create({ observer -> Disposable in
             
             self.mj_footer.refreshingBlock = {
-                observer.onNext()
+                observer.onNext(Void())
             }
             return Disposables.create()
         })
@@ -76,8 +76,9 @@ public extension UIScrollView {
 
 public extension Reactive where Base: UIScrollView {
     
-    public var isRefreshing: UIBindingObserver<Base, Bool> {
-        return UIBindingObserver(UIElement: self.base) { refreshControl, refresh in
+    public var isRefreshing: Binder<Bool> {
+        
+        return Binder(self.base) { refreshControl, refresh in
             if refresh {
                 refreshControl.mj_header.beginRefreshing()
             } else {
@@ -86,9 +87,9 @@ public extension Reactive where Base: UIScrollView {
         }
     }
     
-    public var bottomRefreshState: UIBindingObserver<Base, BottomRefreshState> {
+    public var bottomRefreshState: Binder<BottomRefreshState> {
         
-        return UIBindingObserver(UIElement: self.base, binding: { refreshControl, state in
+        return Binder(self.base) { refreshControl, state in
             
             switch state {
             case .hidden:
@@ -100,7 +101,7 @@ public extension Reactive where Base: UIScrollView {
                 refreshControl.mj_footer.isHidden = false
                 refreshControl.mj_footer.resetNoMoreData()
             }
-        })
+        }
     }
 }
 

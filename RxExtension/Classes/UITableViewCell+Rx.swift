@@ -32,7 +32,7 @@ public extension UITableViewCell {
         
         _ = self.rx.sentMessage(#selector(UITableViewCell.prepareForReuse)).subscribe(onNext: { [weak self] _ in
             let newBag = DisposeBag()
-            objc_setAssociatedObject(self, &prepareForReuseBag, newBag, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+            objc_setAssociatedObject(self as Any, &prepareForReuseBag, newBag, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
         })
         
         return bag
@@ -49,10 +49,10 @@ public extension Reactive where Base: UITableViewCell {
 
 public extension Reactive where Base: UITableViewCell {
     
-    var isMarked: UIBindingObserver<UITableViewCell, Bool> {
-        return UIBindingObserver(UIElement: self.base, binding: { (cell, isMarked) in
+    var isMarked: Binder<Bool> {
+        return Binder(self.base) {  (cell, isMarked) in
             cell.accessoryType = isMarked ? .checkmark : .none
-        })
+        }
     }
 }
 
