@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name             = "RxExtension"
-  s.version          = "0.4.3"
+  s.version          = "0.5.0"
   s.summary          = "Convenience of Rx"
 
   s.description      = <<-DESC
@@ -16,13 +16,13 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'RxExtension/Classes/*.swift'
 
   s.frameworks = 'Foundation'
   s.frameworks = 'UIKit'
-  s.dependency 'RxCocoa', '~> 3.6.1'
-  s.dependency 'RxSwift',    '~> 3.6.1'
-  s.dependency 'MJRefresh',    '~> 3.1.12'
+  s.dependency 'RxCocoa', '~> 4.0.0-rc.0'
+  s.dependency 'RxSwift',    '~> 4.0.0-rc.0'
+  s.dependency 'MJRefresh',    '~> 3.1.14'
 end
