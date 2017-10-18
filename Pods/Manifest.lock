@@ -1,19 +1,19 @@
 PODS:
   - MJRefresh (3.1.14)
-  - RxCocoa (4.0.0-rc.0):
-    - RxSwift (~> 4.0.0-rc.0)
-  - RxSwift (4.0.0-rc.0)
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
 
 DEPENDENCIES:
   - MJRefresh (~> 3.1.14)
-  - RxCocoa (~> 4.0.0-rc.0)
-  - RxSwift (~> 4.0.0-rc.0)
+  - RxCocoa (~> 4.0.0)
+  - RxSwift (~> 4.0.0)
 
 SPEC CHECKSUMS:
   MJRefresh: 6642e35b3227a5447b9fd5e17c552c90196c9859
-  RxCocoa: 62457355be73369670fbdf053a79a491552b64ed
-  RxSwift: 1dd09ceb11531c39adff4efe23556b1484e16967
+  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
 
-PODFILE CHECKSUM: 97241341f82bb649bec66117169c6f896cc40651
+PODFILE CHECKSUM: 0f3bd9d8b9386d4753b6c43df301eb9751a8c82f
 
 COCOAPODS: 1.3.1
