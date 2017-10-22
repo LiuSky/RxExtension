@@ -26,6 +26,7 @@
 		337CDE411E8A27FA0060B1F3 /* UITableViewHeaderFooterView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CDE401E8A27FA0060B1F3 /* UITableViewHeaderFooterView+Rx.swift */; };
 		337CDE431E8A28480060B1F3 /* UICollectionReusableView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CDE421E8A28480060B1F3 /* UICollectionReusableView+Rx.swift */; };
 		338015551EA5ABA900AD7BBC /* ObservableConvertibleType+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338015541EA5ABA900AD7BBC /* ObservableConvertibleType+Rx.swift */; };
+		33B9CBCA1F9C3E8E0012599C /* ActivityIndicator+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B9CBC91F9C3E8E0012599C /* ActivityIndicator+Rx.swift */; };
 		FBA1B93B9B3EE5EFD94CA30F /* Pods_RxExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BFE97FA894A94457EBC03A /* Pods_RxExtension.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		337CDE401E8A27FA0060B1F3 /* UITableViewHeaderFooterView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+Rx.swift"; sourceTree = "<group>"; };
 		337CDE421E8A28480060B1F3 /* UICollectionReusableView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+Rx.swift"; sourceTree = "<group>"; };
 		338015541EA5ABA900AD7BBC /* ObservableConvertibleType+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableConvertibleType+Rx.swift"; sourceTree = "<group>"; };
+		33B9CBC91F9C3E8E0012599C /* ActivityIndicator+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityIndicator+Rx.swift"; sourceTree = "<group>"; };
 		84BFE97FA894A94457EBC03A /* Pods_RxExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FB8511B118C3BC72D90DA92 /* Pods-RxExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxExtension/Pods-RxExtension.release.xcconfig"; sourceTree = "<group>"; };
 		D8145592BE9439F194D446EF /* Pods-RxExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxExtension/Pods-RxExtension.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				337CDE421E8A28480060B1F3 /* UICollectionReusableView+Rx.swift */,
 				338015541EA5ABA900AD7BBC /* ObservableConvertibleType+Rx.swift */,
 				3340C3A81EFB926500336296 /* UIControl+Rx.swift */,
+				33B9CBC91F9C3E8E0012599C /* ActivityIndicator+Rx.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				337CDE3F1E8A25240060B1F3 /* UITableViewCell+Rx.swift in Sources */,
 				3333D0A81E73A2B700CBFE8B /* Reverse+Rx.swift in Sources */,
 				3333D0A91E73A2B700CBFE8B /* UIButton+Rx.swift in Sources */,
+				33B9CBCA1F9C3E8E0012599C /* ActivityIndicator+Rx.swift in Sources */,
 				3330C9681E7BBE3C002E2F88 /* Rx+ReachabilityService.swift in Sources */,
 				3333D08D1E739CCF00CBFE8B /* AppDelegate.swift in Sources */,
 				3330C9671E7BBE3C002E2F88 /* Reachability.swift in Sources */,
