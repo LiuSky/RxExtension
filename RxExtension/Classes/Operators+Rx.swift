@@ -10,8 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-// Two way binding operator between control property and variable, that's all it takes {
-
 infix operator <-> : DefaultPrecedence
 
 public func nonMarkedText(_ textInput: UITextInput) -> String? {
@@ -35,10 +33,9 @@ public func nonMarkedText(_ textInput: UITextInput) -> String? {
     return (textInput.text(in: startRange) ?? "") + (textInput.text(in: endRange) ?? "")
 }
 
-public func <-> <Base>(textInput: TextInput<Base>, variable: Variable<String>) -> Disposable {
-    
-    let bindToUIDisposable = variable.asObservable()
-        .bind(to: textInput.text.orEmpty)
+public func <-> <Base>(textInput: TextInput<Base>, behaviorRelay: BehaviorRelay<String>) -> Disposable {
+    let bindToUIDisposable = behaviorRelay.asObservable()
+        .bind(to: textInput.text)
     let bindToVariable = textInput.text
         .subscribe(onNext: { [weak base = textInput.base] n in
             guard let base = base else {
@@ -58,8 +55,8 @@ public func <-> <Base>(textInput: TextInput<Base>, variable: Variable<String>) -
              
              and you hit "Done" button on keyboard.
              */
-            if let nonMarkedTextValue = nonMarkedTextValue, nonMarkedTextValue != variable.value {
-                variable.value = nonMarkedTextValue
+            if let nonMarkedTextValue = nonMarkedTextValue, nonMarkedTextValue != behaviorRelay.value {
+                behaviorRelay.accept(nonMarkedTextValue)
             }
             }, onCompleted:  {
                 bindToUIDisposable.dispose()
@@ -68,44 +65,26 @@ public func <-> <Base>(textInput: TextInput<Base>, variable: Variable<String>) -
     return Disposables.create(bindToUIDisposable, bindToVariable)
 }
 
-public func <-> <T>(property: ControlProperty<T>, variable: Variable<T>) -> Disposable {
+
+public func <-> <T>(property: ControlProperty<T>, behaviorRelay: BehaviorRelay<T>) -> Disposable {
     if T.self == String.self {
         #if DEBUG
-            fatalError("It is ok to delete this message, but this is here to warn that you are maybe trying to bind to some `rx_text` property directly to variable.\n" +
-                "That will usually work ok, but for some languages that use IME, that simplistic method could cause unexpected issues because it will return intermediate results while text is being inputed.\n" +
-                "REMEDY: Just use `textField <-> variable` instead of `textField.rx_text <-> variable`.\n" +
-                "Find out more here: https://github.com/ReactiveX/RxSwift/issues/649\n"
-            )
+        fatalError("It is ok to delete this message, but this is here to warn that you are maybe trying to bind to some `rx.text` property directly to variable.\n" +
+            "That will usually work ok, but for some languages that use IME, that simplistic method could cause unexpected issues because it will return intermediate results while text is being inputed.\n" +
+            "REMEDY: Just use `textField <-> variable` instead of `textField.rx.text <-> variable`.\n" +
+            "Find out more here: https://github.com/ReactiveX/RxSwift/issues/649\n"
+        )
         #endif
     }
     
-    
-    
-    
-    let bindToUIDisposable = variable.asObservable()
+    let bindToUIDisposable = behaviorRelay.asObservable()
         .bind(to: property)
     let bindToVariable = property
         .subscribe(onNext: { n in
-            variable.value = n
+            behaviorRelay.accept(n)
         }, onCompleted:  {
             bindToUIDisposable.dispose()
         })
     
     return Disposables.create(bindToUIDisposable, bindToVariable)
 }
-
-// }
-
-
-public func <-> <T: Equatable>(lhs: Variable<T>, rhs: Variable<T>) -> Disposable {
-    
-    let bindToUIDisposable = lhs.asObservable()
-        .distinctUntilChanged()
-        .bind(to: rhs)
-    let bindToVariable = rhs.asObservable()
-        .distinctUntilChanged()
-        .bind(to: lhs)
-    
-    return Disposables.create(bindToUIDisposable, bindToVariable)
-}
-
