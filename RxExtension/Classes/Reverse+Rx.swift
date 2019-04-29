@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+/// 相反值
 public protocol Reverseable {
     var reverseValue: Self { get }
 }
@@ -20,15 +21,15 @@ extension Bool: Reverseable {
     }
 }
 
-public extension Variable where Element: Reverseable {
+public extension BehaviorRelay where Element: Reverseable {
     /// 设置相反的值
-    public func reversed() {
-        value = value.reverseValue
+    func reversed() {
+        accept(value.reverseValue)
     }
 }
 
 public extension ObservableType where E: Reverseable {
-    public func reverse() -> Observable<E> {
+    func reverse() -> Observable<E> {
         return asObservable().map { $0.reverseValue }
     }
 }

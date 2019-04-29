@@ -65,7 +65,7 @@ public func <-> <Base>(textInput: TextInput<Base>, behaviorRelay: BehaviorRelay<
     return Disposables.create(bindToUIDisposable, bindToVariable)
 }
 
-
+/// 对 ControlProperty 和 BehaviorRelay 双向绑定
 public func <-> <T>(property: ControlProperty<T>, behaviorRelay: BehaviorRelay<T>) -> Disposable {
     if T.self == String.self {
         #if DEBUG

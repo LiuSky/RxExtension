@@ -15,12 +15,12 @@ private var prepareForReuseBag: Int8 = 0
 
 public extension UITableViewCell {
     
-    public var rx_prepareForReuse: Observable<Void> {
+    var rx_prepareForReuse: Observable<Void> {
         return Observable.of(self.rx.sentMessage(#selector(UITableViewCell.prepareForReuse)).map { _ in () }, self.rx.deallocated).merge()
     }
     
     
-    public var rx_prepareForReuseBag: DisposeBag {
+    var rx_prepareForReuseBag: DisposeBag {
         MainScheduler.ensureExecutingOnScheduler()
         
         if let bag = objc_getAssociatedObject(self, &prepareForReuseBag) as? DisposeBag {
@@ -42,7 +42,7 @@ public extension UITableViewCell {
 
 public extension Reactive where Base: UITableViewCell {
 
-    public var prepareForReuseBag: DisposeBag {
+    var prepareForReuseBag: DisposeBag {
         return base.rx_prepareForReuseBag
     }
 }
