@@ -39,7 +39,7 @@ public extension UIScrollView {
     /// 添加下拉刷新
     ///
     /// - Returns: <#return value description#>
-    public func pullToRefresh() -> Observable<Void> {
+    func pullToRefresh() -> Observable<Void> {
         
         let header = MJRefreshNormalHeader()
         header.lastUpdatedTimeLabel.isHidden = true
@@ -54,12 +54,10 @@ public extension UIScrollView {
         })
     }
     
-    
-    
     /// 添加加载更多
     ///
     /// - Returns: <#return value description#>
-    public func loadMoreFooter() -> Observable<Void> {
+    func loadMoreFooter() -> Observable<Void> {
         
         let refreshFooter = MJRefreshAutoNormalFooter()
         refreshFooter.setTitle(BottomRefreshState.noMoreData.description, for: .noMoreData)
@@ -76,7 +74,7 @@ public extension UIScrollView {
 
 public extension Reactive where Base: UIScrollView {
     
-    public var isRefreshing: Binder<Bool> {
+    var isRefreshing: Binder<Bool> {
         
         return Binder(self.base) { refreshControl, refresh in
             if refresh {
@@ -87,7 +85,7 @@ public extension Reactive where Base: UIScrollView {
         }
     }
     
-    public var bottomRefreshState: Binder<BottomRefreshState> {
+    var bottomRefreshState: Binder<BottomRefreshState> {
         
         return Binder(self.base) { refreshControl, state in
             
@@ -103,6 +101,26 @@ public extension Reactive where Base: UIScrollView {
             }
         }
     }
+    
+}
+
+public extension Reactive where Base: MJRefreshComponent {
+    
+    /// 正在刷新(正在上拉/下拉)
+    func refreshing() -> ControlEvent<Void> {
+        
+        let source: Observable<Void> = Observable.create {
+            [weak control = self.base] observer  in
+            if let control = control {
+                control.refreshingBlock = {
+                    observer.on(.next(()))
+                }
+            }
+            return Disposables.create { observer.onCompleted() }
+        }
+        return ControlEvent(events: source)
+    }
+    
 }
 
 

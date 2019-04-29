@@ -10,13 +10,20 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+/// UIButton.rx拓展
 public extension Reactive where Base: UIButton {
-    public var select: ControlProperty<Bool> {
+    
+    /// 选中ControlProperty
+    var select: ControlProperty<Bool> {
+        
+        /// 点击事件源
         let source = tap.map { [unowned button = self.base] _ -> Bool in
-            button.isSelected = button.isSelected.reverseValue
+            button.isSelected = !button.isSelected
             return button.isSelected
         }
+        
         let sink = isSelected
         return ControlProperty(values: source, valueSink: sink)
     }
+    
 }

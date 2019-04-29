@@ -11,18 +11,24 @@ import RxSwift
 
 
 public extension Reactive where Base: UITableView {
-    public func enableAutoDeselect() -> Disposable {
+    
+    /// 自动隐藏点击效果
+    func enableAutoDeselect() -> Disposable {
         return itemSelected
             .map { (at: $0, animated: true) }
             .subscribe(onNext: base.deselectRow)
     }
+    
 }
 
 public extension Reactive where Base: UICollectionView {
-    public func enableAutoDeselect() -> Disposable {
+    
+    /// 自动隐藏点击效果
+    func enableAutoDeselect() -> Disposable {
         return itemSelected
             .map { (at: $0, animated: true) }
             .subscribe(onNext: base.deselectItem)
     }
+    
 }
 

@@ -14,19 +14,23 @@ import ObjectiveC
 
 fileprivate var disposeBagContext: UInt8 = 0
 
+
 extension Reactive where Base: AnyObject {
+    
     func synchronizedBag<T>( _ action: () -> T) -> T {
         objc_sync_enter(self.base)
         let result = action()
         objc_sync_exit(self.base)
         return result
     }
+    
 }
 
 public extension Reactive where Base: AnyObject {
     
     /// a unique DisposeBag that is related to the Reactive.Base instance only for Reference type
-    public var disposeBag: DisposeBag {
+    /// 为对象添加rx.disposeBag,只用于引用类型对象
+    var disposeBag: DisposeBag {
         get {
             return synchronizedBag {
                 if let disposeObject = objc_getAssociatedObject(base, &disposeBagContext) as? DisposeBag {
@@ -44,6 +48,7 @@ public extension Reactive where Base: AnyObject {
             }
         }
     }
+    
 }
 
 

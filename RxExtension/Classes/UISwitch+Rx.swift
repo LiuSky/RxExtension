@@ -12,7 +12,8 @@ import RxCocoa
 
 public extension Reactive where Base: UISwitch {
     
-    public func isOn(animated: Bool = true) -> ControlProperty<Bool> {
+    func isOn(animated: Bool = true) -> ControlProperty<Bool> {
+        
         let source = self.controlEvent(.valueChanged)
             .map { [unowned uiSwitch = self.base] in uiSwitch.isOn }
         
