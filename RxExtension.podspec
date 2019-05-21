@@ -24,5 +24,5 @@ Pod::Spec.new do |s|
   s.frameworks = 'UIKit'
   s.dependency 'RxCocoa', '~> 5.0.0'
   s.dependency 'RxSwift',    '~> 5.0.0'
-  s.dependency 'MJRefresh',    '~> 3.2.0.'
+  s.dependency 'MJRefresh',    '~> 3.2.0'
 end
