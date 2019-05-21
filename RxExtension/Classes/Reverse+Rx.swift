@@ -28,8 +28,8 @@ public extension BehaviorRelay where Element: Reverseable {
     }
 }
 
-public extension ObservableType where E: Reverseable {
-    func reverse() -> Observable<E> {
+public extension ObservableType where Element: Reverseable {
+    func reverse() -> Observable<Element> {
         return asObservable().map { $0.reverseValue }
     }
 }
