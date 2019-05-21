@@ -116,7 +116,7 @@ public extension Reactive where Base: MJRefreshComponent {
                     observer.on(.next(()))
                 }
             }
-            return Disposables.create { observer.onCompleted() }
+            return Disposables.create {  }
         }
         return ControlEvent(events: source)
     }

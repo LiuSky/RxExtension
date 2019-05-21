@@ -1,29 +1,30 @@
 PODS:
-  - MJRefresh (3.1.15.7)
-  - RxAtomic (4.4.0)
-  - RxCocoa (4.4.0):
-    - RxSwift (~> 4.0)
-  - RxSwift (4.4.0):
-    - RxAtomic (~> 4.4)
+  - MJRefresh (3.2.0)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
 
 DEPENDENCIES:
-  - MJRefresh (~> 3.1.15.7)
-  - RxCocoa (~> 4.4.0)
-  - RxSwift (~> 4.4.0)
+  - MJRefresh (~> 3.2.0)
+  - RxCocoa (~> 5.0.0)
+  - RxSwift (~> 5.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - MJRefresh
-    - RxAtomic
     - RxCocoa
+    - RxRelay
     - RxSwift
 
 SPEC CHECKSUMS:
-  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
-  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
-  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
-  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
 
-PODFILE CHECKSUM: f9935277ae9b9fd25d7bc506e5af25c0dd349622
+PODFILE CHECKSUM: 66af643c48997635e307fe1d0e01732e1f3482e5
 
-COCOAPODS: 1.6.0.beta.1
+COCOAPODS: 1.7.0.beta.3

@@ -21,18 +21,18 @@ import RxSwift
 
 
 // MARK: - 检查输入结果是否和最初第一个值相同创建一个操作符，可以检查输入结果是否和最初的一样。比如一个 TextField 最初是 text1 ，经过一顿乱输，如何判断最终输入结果是否和最初相同？请尽量复用该操作符到各个场景。
-public extension ObservableConvertibleType where E: Equatable {
+public extension ObservableConvertibleType where Element: Equatable {
     
-    func isEqualOriginValue() -> Observable<(value: E, isEqualOriginValue: Bool)> {
+    func isEqualOriginValue() -> Observable<(value: Element, isEqualOriginValue: Bool)> {
         return self.asObservable()
-            .scan(nil as (origin: E, current: E)?, accumulator: { acc, x -> (origin: E, current: E)? in
+            .scan(nil as (origin: Element, current: Element)?, accumulator: { acc, x -> (origin: Element, current: Element)? in
                 if let acc = acc {
                     return (origin: acc.origin, current: x)
                 } else {
                     return (origin: x, current: x)
                 }
             })
-            .map { diff -> (value: E, isEqualOriginValue: Bool) in
+            .map { diff -> (value: Element, isEqualOriginValue: Bool) in
                 return (diff!.current, isEqualOriginValue: diff!.origin == diff!.current)
         }
     }
