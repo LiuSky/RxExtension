@@ -1,9 +1,9 @@
 //
 //  ReachabilityService.swift
-//  RxExample
+//  RxExtension
 //
-//  Created by Vodovozov Gleb on 10/22/15.
-//  Copyright © 2015 Krunoslav Zaher. All rights reserved.
+//  Created by LiuSky on 03/19/2020.
+//  Copyright (c) 2020 LiuSky. All rights reserved.
 //
 
 #if !RX_NO_MODULE

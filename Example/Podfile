@@ -1,0 +1,13 @@
+source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+
+use_frameworks!
+
+target 'RxExtension_Example' do
+  pod 'RxExtension', :path => '../'
+
+  target 'RxExtension_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

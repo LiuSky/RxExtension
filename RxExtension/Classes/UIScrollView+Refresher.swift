@@ -1,15 +1,15 @@
 //
 //  UIScrollView+Refresher.swift
-//  RxRefresh
+//  RxExtension
 //
-//  Created by xiaobin liu on 2017/3/14.
-//  Copyright © 2017年 Sky. All rights reserved.
+//  Created by LiuSky on 03/19/2020.
+//  Copyright (c) 2020 LiuSky. All rights reserved.
 //
 
-import Foundation
 import RxSwift
 import RxCocoa
 import MJRefresh
+import Foundation
 
 /// MARK: - 底部刷新状态
 public enum BottomRefreshState: Int,CustomStringConvertible {
@@ -42,12 +42,12 @@ public extension UIScrollView {
     func pullToRefresh() -> Observable<Void> {
         
         let header = MJRefreshNormalHeader()
-        header.lastUpdatedTimeLabel.isHidden = true
+        header.lastUpdatedTimeLabel?.isHidden = true
         header.isAutomaticallyChangeAlpha = true
         self.mj_header = header
         return Observable.create({ observer -> Disposable in
             
-            self.mj_header.refreshingBlock = {
+            self.mj_header?.refreshingBlock = {
                 observer.onNext(Void())
             }
             return Disposables.create()
@@ -64,7 +64,7 @@ public extension UIScrollView {
         self.mj_footer = refreshFooter
         return Observable.create({ observer -> Disposable in
             
-            self.mj_footer.refreshingBlock = {
+            self.mj_footer?.refreshingBlock = {
                 observer.onNext(Void())
             }
             return Disposables.create()
@@ -78,9 +78,9 @@ public extension Reactive where Base: UIScrollView {
         
         return Binder(self.base) { refreshControl, refresh in
             if refresh {
-                refreshControl.mj_header.beginRefreshing()
+                refreshControl.mj_header?.beginRefreshing()
             } else {
-                refreshControl.mj_header.endRefreshing()
+                refreshControl.mj_header?.endRefreshing()
             }
         }
     }
@@ -91,13 +91,13 @@ public extension Reactive where Base: UIScrollView {
             
             switch state {
             case .hidden:
-                refreshControl.mj_footer.isHidden = true
+                refreshControl.mj_footer?.isHidden = true
             case .noMoreData:
-                refreshControl.mj_footer.isHidden = false
-                refreshControl.mj_footer.endRefreshingWithNoMoreData()
+                refreshControl.mj_footer?.isHidden = false
+                refreshControl.mj_footer?.endRefreshingWithNoMoreData()
             default:
-                refreshControl.mj_footer.isHidden = false
-                refreshControl.mj_footer.resetNoMoreData()
+                refreshControl.mj_footer?.isHidden = false
+                refreshControl.mj_footer?.resetNoMoreData()
             }
         }
     }

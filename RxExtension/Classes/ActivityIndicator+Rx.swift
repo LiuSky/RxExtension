@@ -2,8 +2,8 @@
 //  ActivityIndicator+Rx.swift
 //  RxExtension
 //
-//  Created by xiaobin liu on 2017/10/22.
-//  Copyright © 2017年 Sky. All rights reserved.
+//  Created by LiuSky on 03/19/2020.
+//  Copyright (c) 2020 LiuSky. All rights reserved.
 //
 
 #if !RX_NO_MODULE

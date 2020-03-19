@@ -2,15 +2,15 @@
 //  UIControl+Rx.swift
 //  RxExtension
 //
-//  Created by xiaobin liu on 2017/6/22.
-//  Copyright © 2017年 Sky. All rights reserved.
+//  Created by LiuSky on 03/19/2020.
+//  Copyright (c) 2020 LiuSky. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import RxSwift
 import RxCocoa
 
+/// MARK - UIControl
 extension UIControl {
     
     static func valuePublic<T, ControlType: UIControl>(_ control: ControlType, getter:  @escaping (ControlType) -> T, setter: @escaping (ControlType, T) -> ()) -> ControlProperty<T> {
